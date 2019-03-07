@@ -1,0 +1,25 @@
+{
+  "name": "@jledentu/breizhcamp-2019-loki",
+  "version": "0.0.1",
+  "description": "Slides and demo for a talk given at Breizhcamp on 21 March, 2019 about visual regression testing with Storybook and Loki (in french)",
+  "main": "index.js",
+  "repository": "git@github.com:jledentu/breizhcamp-2019-loki.git",
+  "author": "Jérémie Ledentu <jledentu@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm-run-all build-*",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook -o dist/storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/react": "^5.0.0",
+    "babel-loader": "^8.0.5",
+    "mdx-deck": "^1.10.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
