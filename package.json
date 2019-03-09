@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
-    "@storybook/react": "^5.0.0",
+    "@storybook/react": "^5.0.1",
     "babel-loader": "^8.0.5",
     "loki": "^0.14.2",
     "mdx-deck": "^1.10.0",
