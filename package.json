@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all build-*",
-    "slides": "mdx-deck slides/index.mdx",
+    "slides": "mdx-deck --no-html slides/index.mdx",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o dist/storybook"
   },
@@ -22,6 +22,7 @@
     "webpack-dev-middleware": "3.6.0"
   },
   "dependencies": {
+    "antd": "^3.15.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

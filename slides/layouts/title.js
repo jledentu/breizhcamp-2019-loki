@@ -52,7 +52,7 @@ const Avatar = styled.img`
   border-radius: 50%;
 `;
 
-const Infos = styled.p`
+const Infos = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;

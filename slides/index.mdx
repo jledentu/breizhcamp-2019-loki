@@ -1,16 +1,104 @@
+import { Invert } from 'mdx-deck/layouts'
 import Title from './layouts/title'
+import Background from './layouts/background'
+import Table from '../components/Table.jsx'
+export { default as theme } from 'mdx-deck/themes'
 
 export default Title
 
 # Stop aux régressions visuelles
+
 Avec Storybook et Loki
 
 ---
 
-# About Me
+## Quand on tombe sur une régression visuelle...
+
 ---
-```jsx
-<CodeSnippet />
+
+Example de régression visuelle (tableau)
+
+<Table></Table>
+<Table broken={true}></Table>
+
+---
+
+Un autre exemple de régression visuelle (couleurs)
+
+---
+
+Un exemple plus grave de régression visuelle (chart)
+
+---
+
+Tests fonctionnels inadaptés
+
+- Une régression visuelle ne casse pas la fonctionnalité
+- Quelle assertion écrire ?
+
+---
+
+export default function({ ...props }) {
+  return Background({src: "./images/taking-photo.jpg", ...props})
+}
+
+## → Tests de non régression visuelle
+
+---
+
+## Principe
+
+Comparaison d'images
+
+---
+
+# Mise en oeuvre avec Storybook et Loki
+
+---
+
+## Storybook
+
+Environnement de test de composants
+
+---
+
+## Installation
+
+```sh
+npm install -D storybook
 ```
+
 ---
-# The end
+
+## Loki
+
+Outil de *Visual regression testing*
+
+---
+
+- Ouvre un Storybook dans le browser (Chrome)
+- Génère des images à partir des stories
+- Compare les images avec les références
+
+---
+
+## Avantages
+
+- Simplicité de mise en place
+- Pas ou peu de maintenance (si Storybook)
+
+---
+
+## Limitations
+
+- Pas de scripting
+- Pas de gestion des timeouts
+- Chrome / émulateurs iOS et Android uniquement
+
+---
+
+# Des questions ?
+
+---
+
+# Merci !
