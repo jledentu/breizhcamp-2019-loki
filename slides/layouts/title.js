@@ -6,7 +6,7 @@ const Wrapper = styled.main`
   height: 100vh;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 `;
@@ -21,7 +21,7 @@ const TitleLayout = styled.div(
     justifyContent: 'center',
     backgroundColor: 'white',
     '& h1': {
-      fontSize: '2.3em',
+      fontSize: '1.5em',
       color: 'black',
     },
     '& *': {
@@ -33,10 +33,11 @@ const TitleLayout = styled.div(
 const Footer = styled.footer`
   color: white;
   width: 100vw;
-  padding: 2em 1em;
+  padding: 1.5em 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.8em;
 `;
 
 const AboutMe = styled.div`

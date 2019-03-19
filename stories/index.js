@@ -1,11 +1,22 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '@storybook/react/demo';
+import centered from '@storybook/addon-centered/react';
+import { Button, Form, Table, UploadForm } from '../components';
 
-storiesOf('Button', module)
-  .add('with text', () => (
+storiesOf('Bouton de contact', module)
+  .addDecorator(centered)
+  .add('Défaut', () => (
     <Button>Hello Button</Button>
   ))
-  .add('with some emoji', () => (
-    <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
+  .add('Désactivé', () => (
+    <Button disabled={true}>Hello Button</Button>
+  ));
+
+storiesOf('Contact Form', module)
+  .addDecorator(centered)
+  .add('Première page', () => (
+    <Form></Form>
+  ))
+  .add('Seconde page', () => (
+    <UploadForm></UploadForm>
   ));

@@ -1,8 +1,11 @@
-import { Invert } from 'mdx-deck/layouts'
+import { Appear } from 'mdx-deck'
+import { Invert, Horizontal } from 'mdx-deck/layouts'
+import { Icon } from 'antd'
+import { RegressionTest } from './components'
 import Title from './layouts/title'
 import Background from './layouts/background'
 import Table from '../components/Table.jsx'
-export { default as theme } from 'mdx-deck/themes'
+export const themes = []
 
 export default Title
 
@@ -46,9 +49,11 @@ export default function({ ...props }) {
 
 ---
 
-## Principe
+export default Horizontal;
 
-Comparaison d'images
+<RegressionTest onlyReference={true}/>
+<RegressionTest/>
+<RegressionTest fail={true}/>
 
 ---
 
